@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* 1. Force the brand wrapper to be a flex row that shrinks tightly to its contents */
+.brand-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto 20px auto; /* Centers the whole unit horizontally */
+}
+
+/* 2. Crucial: Prevent the h1 from stretching across the screen */
+.brand-container h1 {
+  font-size: 4.5rem;
+  color: chocolate;
+  margin: 0;
+  display: inline; /* Keeps the text box exactly the size of the letters */
+  padding-right: 15px; /* Creates an immediate pocket for your icon */
+}
+
+/* 3. Lock the icon to the edge of that tight text boundary */
+.brand-container img {
+  position: absolute;
+  top: -5px;
+  right: -25px; /* Tracks the literal end of the h1 letters, not the monitor edge */
+  width: 45px;
+  height: auto;
+}
+
+main {
+  width: 100%;
+  max-width: 528px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  text-align: center;
+}
+
+p {
+  color: rgb(78, 76, 76);
+  margin: 0;
+  line-height: 40px;
+}
+.header {
+  margin: 0 0 47px 0;
+}
+.header-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+li,
+a {
+  color: rgb(78, 76, 76);
+  text-decoration: none;
+}
+li,
+a:hover {
+  color: chocolate;
+  border-bottom: 1px solid chocolate;
+}
+:active {
+  color: rgb(77, 33, 2);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 0px 0;
+}
+input {
+  width: 250px;
+  padding: 8px;
+}
+button {
+  margin: 16px 0 20px 0;
+  padding: 7px;
+  background-color: chocolate;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(185, 92, 26);
+  color: rgb(177, 249, 191);
+}
+button:active {
+  background-color: rgb(220, 140, 83);
+
+  color: black;
+}
+footer {
+  margin-top: auto;
+  color: grey;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #eeeeee;
+}
