@@ -110,3 +110,56 @@ footer {
   text-align: center;
   border-top: 1px solid #eeeeee;
 }
+
+/* ==========================================
+   MOBILE RESPONSIVENESS OVERRIDES (Phones)
+   ========================================== */
+@media (max-width: 600px) {
+  /* 1. Reduce the massive heading title size */
+  .brand-container h1 {
+    font-size: 2.8rem !important; /* Shrunk down so it fits perfectly on narrow screens */
+  }
+
+  .brand-container img {
+    width: 32px; /* Scales down the title icon proportionally */
+    right: -15px;
+    top: -5px;
+  }
+
+  /* 2. Fix the layout padding and text length constraints */
+  main {
+    width: 88% !important;
+    padding: 15px !important;
+    margin: 0 auto;
+  }
+
+  /* Add comfortable readability margins for your paragraphs */
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 12px 10px; /* Gives the text room on the left/right edges */
+    text-align: center;
+  }
+
+  /* 3. Make input larger, taller, and prevent auto-zoom */
+  input[type="text"] {
+    padding: 14px 16px !important; /* Makes it chunky and easy to tap */
+    font-size: 16px !important; /* 💡 MAGIC KEY: Stops mobile browsers from zooming on click */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 14px !important;
+    font-size: 16px !important;
+  }
+
+  /* 4. Stop weather result strings from getting cut off on small screens */
+  #message-1,
+  #message-2 {
+    width: 100%;
+    word-wrap: break-word; /* Forces long lines to wrap cleanly onto a new row instead of breaking out */
+    white-space: normal;
+    padding: 0 5px;
+  }
+}
