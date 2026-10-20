@@ -61,14 +61,16 @@ p {
 .header-container {
   display: flex;
   justify-content: center;
+  text-align: center;
   gap: 20px;
 }
-li,
+
 a {
-  color: rgb(78, 76, 76);
+  color: rgb(43, 43, 43);
   text-decoration: none;
+  font-weight: bold;
 }
-li,
+
 a:hover {
   color: chocolate;
   border-bottom: 1px solid chocolate;
@@ -86,7 +88,7 @@ input {
   padding: 8px;
 }
 button {
-  margin: 16px 0 20px 0;
+  margin: 16px 0 0 0;
   padding: 7px;
   background-color: chocolate;
   color: white;
@@ -117,11 +119,11 @@ footer {
 @media (max-width: 600px) {
   /* 1. Reduce the massive heading title size */
   .brand-container h1 {
-    font-size: 2.8rem !important; /* Shrunk down so it fits perfectly on narrow screens */
+    font-size: 3.8rem !important; /* Shrunk down so it fits perfectly on narrow screens */
   }
 
   .brand-container img {
-    width: 32px; /* Scales down the title icon proportionally */
+    width: 35px; /* Scales down the title icon proportionally */
     right: -15px;
     top: -5px;
   }

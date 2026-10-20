@@ -10,12 +10,12 @@ const forecast = (latitude, longitude, callback) => {
     } else if (resposne.body.error || resposne.body.cod !== 200) {
       return callback("Location not found on weather server!");
     } else {
-      const currentmain = resposne.body.main;
+      const currentMain = resposne.body.main;
       const weatherDetail = resposne.body.weather[0];
 
       callback(
         undefined,
-        `it is currently ${currentmain.temp} degrees out, there is ${weatherDetail.description} condition`,
+        ` it is currently ${currentMain.temp} degrees out. Today's high will be ${currentMain.temp_max} with a low of ${currentMain.temp_min}. it will be ${weatherDetail.description} outside `,
       );
     }
   });
